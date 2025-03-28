@@ -33,6 +33,13 @@
     top: 200px;
 }
 
+.disclaimer {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    opacity: 1;
+}
+
 @keyframes loading {
     0% {
         transform: rotate(0deg);
