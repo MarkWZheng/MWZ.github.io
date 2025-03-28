@@ -1,0 +1,71 @@
+.rotated {
+    transform: rotate(45deg); /* Equal to rotateZ(45deg) */
+    background-color: pink;
+  }
+
+.open {
+    place-items: center;
+    max-height: 100%;
+}
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInLoad;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+.open-load {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    opacity: 1;
+    bottom: 175px;
+    animation: fadeInLoad 1s, loading 4s linear infinite;
+    /* animation-duration: infinite; */
+}
+
+.open-me {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    opacity: 1;
+    top: 200px;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+      }
+
+}
+
+@keyframes fadeInLoad {
+	0% {
+		opacity: 0;
+        
+	}
+	100% {
+		opacity: 1;
+	}
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+      }
+}
